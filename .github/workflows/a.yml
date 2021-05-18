@@ -1,0 +1,11 @@
+name: Test ${{ github.event.inputs.name }}
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        default: mneow
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo hello ${{ github.event.inputs.name }}
